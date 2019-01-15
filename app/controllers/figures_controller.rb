@@ -36,7 +36,7 @@ class FiguresController < ApplicationController
   end
 
   post '/figures/:id'
-    @figure = Figure.create(params[:figure])
+    @figure = Figure.find(params[:figure])
     @title = Title.create(params[:title])
     @figure.titles << @title
 

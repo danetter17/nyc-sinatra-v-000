@@ -37,8 +37,6 @@ class FiguresController < ApplicationController
 
   post '/figures/:id'
     @figure = Figure.find(params[:figure])
-    @title = Title.create(params[:title])
-    @figure.titles << @title
 
     if params[:title][:name].empty?
       @figure.titles.build(:name => params[:title][:name])

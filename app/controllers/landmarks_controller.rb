@@ -20,8 +20,10 @@ class LandmarksController < ApplicationController
   end
 
   get '/landmarks/:id/edit' do
-    
+
   end
 
-  patch '/landmarks/:id'
+  patch '/landmarks/:id' do
+    
+  end
 end

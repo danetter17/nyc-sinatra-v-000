@@ -45,9 +45,8 @@ class FiguresController < ApplicationController
 
     if params[:landmark][:name].empty?
       @figure.landmarks.build(:name => params[:landmark][:name])
+      @figure.save
     end
-
-    @figure.save
     redirect to "figures/#{@figure.id}"
   end
 end

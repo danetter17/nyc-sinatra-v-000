@@ -35,7 +35,7 @@ class FiguresController < ApplicationController
     erb :'/figures/show'
   end
 
-  post '/figures/:id' do
+  patch '/figures/:id' do
     @figure = Figure.find(params[:figure])
     @figure.update(params[:figure])
     

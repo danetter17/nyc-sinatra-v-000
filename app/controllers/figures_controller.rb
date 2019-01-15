@@ -44,7 +44,7 @@ class FiguresController < ApplicationController
       @figure.save
     end
 
-    if params[:landmark][:name].empty?
+    if !params[:landmark][:name].empty?
       @figure.landmarks.build(:name => params[:landmark][:name])
       @figure.save
     end
